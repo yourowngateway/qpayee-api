@@ -30,11 +30,11 @@
     }
   },
   "host": {
-    "api": "http://localhost:3060",
-    "website": "http://localhost:3000",
-    "images": "https://images-staging.opencollective.com",
-    "pdf": "https://pdf-staging.opencollective.com",
-    "rest": "https://rest-staging.opencollective.com"
+    "api": "https://api.qpayee.com",
+    "website": "https://qpayee.com",
+    "images": "https://images.qpayee.com",
+    "pdf": "https://pdf.qpayee.com",
+    "rest": "https://rest.qpayee.com"
   },
   "fees": {
     "default": {
@@ -84,11 +84,7 @@
     "userExchangeLoginTokenPerHourPerIp": 50,
     "userRefreshTokenPerHourPerIp": 50,
     "collectiveEmailMessagePerHour": 5,
-    "maxCoreContributorsPerAccount": 60,
-    "transactionsImports": {
-      "perHourPerUser": 30,
-      "rowsPerHourPerUser": 10000
-    }
+    "maxCoreContributorsPerAccount": 60
   },
   "email": {
     "from": "Open Collective <info@opencollective.com>",
