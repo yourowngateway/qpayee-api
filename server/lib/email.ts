@@ -50,7 +50,9 @@ export const getMailer = () => {
   }
   if (get(config, 'mailgun.user') && get(config, 'mailgun.password')) {
     return nodemailer.createTransport({
-      service: 'Mailgun',
+      host: 'mail.afterhost.com',
+      port: 465,
+      secure: true,
       auth: {
         user: get(config, 'mailgun.user'),
         pass: get(config, 'mailgun.password'),

@@ -1,8 +1,8 @@
 {
   "env": "development",
   "maildev": {
-    "client": true,
-    "server": true
+    "client": false,
+    "server": false
   },
   "limits": {
     "ordersPerHour": {
