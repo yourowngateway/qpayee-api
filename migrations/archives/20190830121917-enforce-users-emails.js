@@ -5,7 +5,7 @@ module.exports = {
     // Add a default email to all users with active memberships
     await queryInterface.sequelize.query(`
       UPDATE  "Users" AS u
-      SET     "email" = FORMAT('missing-email-%s@opencollective.com', u.id)
+      SET     "email" = FORMAT('missing-email-%s@qpayee.com', u.id)
       FROM    "Members" AS m
       WHERE   m."MemberCollectiveId" = u."CollectiveId"
       AND     m.id IS NOT NULL
@@ -36,7 +36,7 @@ module.exports = {
     // Add default emails to remove any null values
     await queryInterface.sequelize.query(`
       UPDATE  "Users"
-      SET     "email" = FORMAT('missing-email-%s@opencollective.com', id)
+      SET     "email" = FORMAT('missing-email-%s@qpayee.com', id)
       WHERE   "email" IS NULL
     `);
 

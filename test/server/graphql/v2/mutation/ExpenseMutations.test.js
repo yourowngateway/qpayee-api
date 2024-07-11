@@ -1772,7 +1772,7 @@ describe('server/graphql/v2/mutation/ExpenseMutations', () => {
           {
             ...pick(item, ['id', 'url', 'amount']),
             description: 'totally valid beer',
-            url: 'http://opencollective.com/cool/story/bro',
+            url: 'http://qpayee.com/cool/story/bro',
           },
         ],
       };

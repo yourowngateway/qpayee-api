@@ -144,7 +144,7 @@ class Notification extends Model<InferAttributes<Notification>, InferCreationAtt
 
   /**
    * Get the list of subscribers to a mailing list
-   * (e.g. backers@:collectiveSlug.opencollective.com, :eventSlug@:collectiveSlug.opencollective.com)
+   * (e.g. backers@:collectiveSlug.qpayee.com, :eventSlug@:collectiveSlug.qpayee.com)
    * We exclude users that have unsubscribed (by looking for rows in the Notifications table that are active: false)
    */
   static async getSubscribers(collectiveSlug: string | number, mailinglist: string) {
@@ -390,7 +390,7 @@ Notification.init(
         },
         notAnInternalUrl: (url: string) => {
           const rootDomain = getRootDomain(url);
-          if (rootDomain === 'opencollective.com') {
+          if (rootDomain === 'qpayee.com') {
             throw new Error('Open Collective URLs cannot be used as webhooks');
           }
         },

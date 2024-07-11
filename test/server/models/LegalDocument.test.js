@@ -45,7 +45,7 @@ describe('server/models/LegalDocument', () => {
 
   const userData = {
     username: 'xdamman',
-    email: 'xdamman@opencollective.com',
+    email: 'xdamman@qpayee.com',
   };
 
   const hostCollectiveData = {
@@ -198,7 +198,7 @@ describe('server/models/LegalDocument', () => {
     await LegalDocument.create(legalDoc);
     expect(LegalDocument.create(legalDoc)).to.be.rejected;
 
-    const user2 = await User.createUserWithCollective({ username: 'piet', email: 'piet@opencollective.com' });
+    const user2 = await User.createUserWithCollective({ username: 'piet', email: 'piet@qpayee.com' });
     const user2Collective = await Collective.findByPk(user2.CollectiveId);
 
     const legalDoc2 = Object.assign({}, documentData, {

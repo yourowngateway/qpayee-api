@@ -36,7 +36,7 @@ describe('server/paymentProviders/stripe/virtual-cards', () => {
         stripeEndpointSecret: 'stripeEndpointSecret',
       },
     });
-    collectiveAdmin = await fakeUser({ email: 'emailbcc@opencollective.com' });
+    collectiveAdmin = await fakeUser({ email: 'emailbcc@qpayee.com' });
     collective = await fakeCollective({
       HostCollectiveId: host.id,
       admin: collectiveAdmin.collective,

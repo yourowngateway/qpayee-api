@@ -2,7 +2,7 @@
 # This shell scripts copies the production database to the staging database
 # Usage: npm run db:copyprodtostaging (from the root of the opencollective-api repo)
 #
-# The staging version of OpenCollective is on https://staging.opencollective.com
+# The staging version of OpenCollective is on https://staging.qpayee.com
 ENV="${1}"
 PROD_PG_URL_ENVIRONMENT_VARIABLE=`heroku config:get PG_URL_ENVIRONMENT_VARIABLE -a opencollective-prod-api`
 PROD_PG_URL_ENVIRONMENT_VARIABLE="${PROD_PG_URL_ENVIRONMENT_VARIABLE:-DATABASE_URL}"

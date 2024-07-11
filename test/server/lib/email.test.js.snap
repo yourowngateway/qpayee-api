@@ -40,12 +40,12 @@ exports[`server/lib/email Sending emails sends the thankyou.fr email template 1`
 
 <p style=\\"color: #494B4D; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; line-height: 18px;\\">Vous pouvez suivre nos prochaines activités et comment on va utiliser l'argent recolté sur la page de notre collectif
   ouvert:
-  <a href=\\"https://opencollective.com/enmarchebe\\" style=\\"text-decoration: none; color: #297EFF;\\">https://opencollective.com/enmarchebe</a>.
+  <a href=\\"https://qpayee.com/enmarchebe\\" style=\\"text-decoration: none; color: #297EFF;\\">https://qpayee.com/enmarchebe</a>.
 </p>
 
 
 <h2 style=\\"color: #303233; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight: normal; font-size: 20px; line-height: 24px; text-align: center;\\">Aidez-nous à récolter plus d'argent!</h2>
-<p style=\\"color: #494B4D; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; line-height: 18px;\\">Partagez cette URL: <a href=\\"https://opencollective.com/enmarchebe/donate\\" style=\\"text-decoration: none; color: #297EFF;\\">https://opencollective.com/enmarchebe/donate</a>.
+<p style=\\"color: #494B4D; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; line-height: 18px;\\">Partagez cette URL: <a href=\\"https://qpayee.com/enmarchebe/donate\\" style=\\"text-decoration: none; color: #297EFF;\\">https://qpayee.com/enmarchebe/donate</a>.
 
 
 
@@ -80,12 +80,12 @@ exports[`server/lib/email Sending emails sends the thankyou.fr email template 1`
   <tr>
     <td colspan=\\"3\\" align=\\"center\\" style=\\"font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;box-sizing:border-box;font-size:12px;color:#999;\\">
       We can do great things together<br><br>
-      To unsubscribe from thank you for your donation, <a href=\\"http://localhost:3000/email/unsubscribe/user1%40opencollective.com/enmarchebe/order.thankyou/54349853da7f4493e08265f3a6d600a9b705aec3bea42cb8ce23688c3060c3837d04a6285263edfdcdc83cfd7a7f95692f274a1c4d7f40f4c0db031e638589e9\\" style=\\"text-decoration: none; color: #297EFF;\\">click here</a><br><br>
+      To unsubscribe from thank you for your donation, <a href=\\"http://localhost:3000/email/unsubscribe/user1%40qpayee.com/enmarchebe/order.thankyou/54349853da7f4493e08265f3a6d600a9b705aec3bea42cb8ce23688c3060c3837d04a6285263edfdcdc83cfd7a7f95692f274a1c4d7f40f4c0db031e638589e9\\" style=\\"text-decoration: none; color: #297EFF;\\">click here</a><br><br>
   
       You can also follow us on <a href=\\"https://twitter.com/OpenCollect\\" style=\\"text-decoration: none; color: #297EFF;\\">Twitter</a> or come chat with us on our public
-      <a href=\\"https://discord.opencollective.com\\" style=\\"text-decoration: none; color: #297EFF;\\">Discord</a>.
+      <a href=\\"https://discord.qpayee.com\\" style=\\"text-decoration: none; color: #297EFF;\\">Discord</a>.
       <br><br>
-      Made with ❤️ from <a href=\\"https://docs.opencollective.com/help/about/team\\" style=\\"text-decoration: none; color: #297EFF;\\">all over the world</a>
+      Made with ❤️ from <a href=\\"https://docs.qpayee.com/help/about/team\\" style=\\"text-decoration: none; color: #297EFF;\\">all over the world</a>
     </td>
   </tr>
   <tr>
@@ -100,7 +100,7 @@ exports[`server/lib/email Sending emails sends the thankyou.fr email template 1`
   </td>
   </tr>
   </table><!-- 100% width table -->
-  <!-- OpenCollective.com -->
+  <!-- qpayee.com -->
   </body>
   
   </html>"
@@ -114,13 +114,13 @@ Votre dernière contribution de 50,00 € vient d'être reçue. Merci pour cont
 
 Vous pouvez suivre nos prochaines activités et comment on va utiliser l'argent
 recolté sur la page de notre collectif ouvert:
-https://opencollective.com/enmarchebe [https://opencollective.com/enmarchebe].
+https://qpayee.com/enmarchebe [https://qpayee.com/enmarchebe].
 
 
 AIDEZ-NOUS À RÉCOLTER PLUS D'ARGENT!
 
-Partagez cette URL: https://opencollective.com/enmarchebe/donate
-[https://opencollective.com/enmarchebe/donate].
+Partagez cette URL: https://qpayee.com/enmarchebe/donate
+[https://qpayee.com/enmarchebe/donate].
 
 Encore merci! 🙏
 
@@ -132,13 +132,13 @@ http://localhost:3000
 We can do great things together
 
 To unsubscribe from thank you for your donation, click here
-[http://localhost:3000/email/unsubscribe/user1%40opencollective.com/enmarchebe/order.thankyou/54349853da7f4493e08265f3a6d600a9b705aec3bea42cb8ce23688c3060c3837d04a6285263edfdcdc83cfd7a7f95692f274a1c4d7f40f4c0db031e638589e9]
+[http://localhost:3000/email/unsubscribe/user1%40qpayee.com/enmarchebe/order.thankyou/54349853da7f4493e08265f3a6d600a9b705aec3bea42cb8ce23688c3060c3837d04a6285263edfdcdc83cfd7a7f95692f274a1c4d7f40f4c0db031e638589e9]
 
 You can also follow us on Twitter [https://twitter.com/OpenCollect] or come chat
-with us on our public Discord [https://discord.opencollective.com].
+with us on our public Discord [https://discord.qpayee.com].
 
 Made with ❤️ from all over the world
-[https://docs.opencollective.com/help/about/team]"
+[https://docs.qpayee.com/help/about/team]"
 `;
 
 exports[`server/lib/email render Automatically generates text version 1`] = `
@@ -195,7 +195,7 @@ exports[`server/lib/email render Automatically generates text version 1`] = `
     <link itemprop=\\"target\\" content=\\"https://opencollective/USER_LOGIN_LINK\\">
     <meta itemprop=\\"name\\" content=\\"Login\\">
   </div>
-  <meta itemprop=\\"description\\" content=\\"Sign In to opencollective.com\\">
+  <meta itemprop=\\"description\\" content=\\"Sign In to qpayee.com\\">
 </div>
 
 </td>
@@ -223,9 +223,9 @@ exports[`server/lib/email render Automatically generates text version 1`] = `
     We can do great things together<br><br>
 
     You can also follow us on <a href=\\"https://twitter.com/OpenCollect\\" style=\\"text-decoration: none; color: #297EFF;\\">Twitter</a> or come chat with us on our public
-    <a href=\\"https://discord.opencollective.com\\" style=\\"text-decoration: none; color: #297EFF;\\">Discord</a>.
+    <a href=\\"https://discord.qpayee.com\\" style=\\"text-decoration: none; color: #297EFF;\\">Discord</a>.
     <br><br>
-    Made with ❤️ from <a href=\\"https://docs.opencollective.com/help/about/team\\" style=\\"text-decoration: none; color: #297EFF;\\">all over the world</a>
+    Made with ❤️ from <a href=\\"https://docs.qpayee.com/help/about/team\\" style=\\"text-decoration: none; color: #297EFF;\\">all over the world</a>
   </td>
 </tr>
 <tr>
@@ -240,7 +240,7 @@ exports[`server/lib/email render Automatically generates text version 1`] = `
 </td>
 </tr>
 </table><!-- 100% width table -->
-<!-- OpenCollective.com -->
+<!-- qpayee.com -->
 </body>
 
 </html>
@@ -250,7 +250,7 @@ exports[`server/lib/email render Automatically generates text version 1`] = `
     <span style=\\"padding: .2em .4em; margin: 0; background-color: rgba(27,31,35,.05); border-radius: 3px;\\">
       
     </span>.
-    If you did not request this email, please inform <a href=\\"mailto:support@opencollective.com\\" style=\\"text-decoration: none; color: #297EFF;\\">support@opencollective.com</a>.
+    If you did not request this email, please inform <a href=\\"mailto:support@qpayee.com\\" style=\\"text-decoration: none; color: #297EFF;\\">support@qpayee.com</a>.
 </div>
 </center>
 "
@@ -282,8 +282,8 @@ http://localhost:3000
 We can do great things together
 
 You can also follow us on Twitter [https://twitter.com/OpenCollect] or come chat
-with us on our public Discord [https://discord.opencollective.com].
+with us on our public Discord [https://discord.qpayee.com].
 
 Made with ❤️ from all over the world
-[https://docs.opencollective.com/help/about/team]"
+[https://docs.qpayee.com/help/about/team]"
 `;

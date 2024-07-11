@@ -405,7 +405,7 @@ describe('server/models/Notification', () => {
       await expect(Notification.create({ webhookUrl: 'http://localhost' })).to.be.rejectedWith(
         'Validation error: Webhook URL must be a valid URL',
       );
-      await expect(Notification.create({ webhookUrl: 'https://opencollective.com' })).to.be.rejectedWith(
+      await expect(Notification.create({ webhookUrl: 'https://qpayee.com' })).to.be.rejectedWith(
         'Validation error: Open Collective URLs cannot be used as webhooks',
       );
       await expect(Notification.create({ webhookUrl: 'https://0.0.0.0' })).to.be.rejectedWith(

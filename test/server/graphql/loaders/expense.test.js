@@ -122,7 +122,7 @@ describe('server/graphql/loaders/expense', () => {
         await models.LegalDocument.create({
           year: parseInt(new Date().toISOString().split('-')) - 4,
           documentType: LEGAL_DOCUMENT_TYPE.US_TAX_FORM,
-          documentLink: 'https://opencollective.com/tos',
+          documentLink: 'https://qpayee.com/tos',
           requestStatus: 'RECEIVED',
           CollectiveId: user.CollectiveId,
         });
@@ -205,7 +205,7 @@ describe('server/graphql/loaders/expense', () => {
         await models.LegalDocument.create({
           year: parseInt(new Date().toISOString().split('-')),
           documentType: LEGAL_DOCUMENT_TYPE.US_TAX_FORM,
-          documentLink: 'https://opencollective.com/tos',
+          documentLink: 'https://qpayee.com/tos',
           requestStatus: 'RECEIVED',
           CollectiveId: user.CollectiveId,
         });
@@ -226,7 +226,7 @@ describe('server/graphql/loaders/expense', () => {
         await models.LegalDocument.create({
           year: parseInt(new Date().toISOString().split('-')) - 1,
           documentType: LEGAL_DOCUMENT_TYPE.US_TAX_FORM,
-          documentLink: 'https://opencollective.com/tos',
+          documentLink: 'https://qpayee.com/tos',
           requestStatus: 'RECEIVED',
           CollectiveId: user.CollectiveId,
         });

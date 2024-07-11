@@ -258,7 +258,7 @@ describe('server/lib/recurring-contributions', () => {
           subscriptionsLink: `${config.host.website}/dashboard/${order.fromCollective.slug}/outgoing-contributions?status=ACTIVE&status=ERROR&type=RECURRING`,
         },
         {
-          from: `"${order.collective.name}" <no-reply@opencollective.com>`,
+          from: `"${order.collective.name}" <no-reply@qpayee.com>`,
         },
       ]);
     });
@@ -280,7 +280,7 @@ describe('server/lib/recurring-contributions', () => {
           subscriptionsLink: `${config.host.website}/dashboard/${order.fromCollective.slug}/outgoing-contributions?status=ACTIVE&status=ERROR&type=RECURRING`,
         },
         {
-          from: `"${order.collective.name}" <no-reply@opencollective.com>`,
+          from: `"${order.collective.name}" <no-reply@qpayee.com>`,
         },
       ]);
     });

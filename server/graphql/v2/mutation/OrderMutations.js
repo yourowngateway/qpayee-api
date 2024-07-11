@@ -1028,7 +1028,7 @@ const orderMutations = {
       }).catch(error => {
         reportErrorToSentry(error, { transactionName: 'orderFraudProtection', user: req.remoteUser });
         throw new ValidationFailed(
-          "There's something wrong with the payment, please contact support@opencollective.com.",
+          "There's something wrong with the payment, please contact support@qpayee.com.",
           undefined,
           { includeId: true },
         );

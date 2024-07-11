@@ -130,7 +130,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
       expensePolicy: 'Be reasonable',
       contributionPolicy: 'Be generous',
       currency: 'EUR',
-      website: 'https://opencollective.com',
+      website: 'https://qpayee.com',
       countryISO: 'FR',
       tags: ['mutual-aid', 'meetup'],
     });
@@ -165,7 +165,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
       const result = await graphqlQueryV2(editSettingsMutation, {
         account: { legacyId: collective.id },
         key: 'tos',
-        value: 'https://opencollective.com/tos',
+        value: 'https://qpayee.com/tos',
       });
       expect(result.errors).to.exist;
       expect(result.errors[0].message).to.match(/You need to be authenticated to perform this action/);
@@ -177,7 +177,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
         {
           account: { legacyId: collective.id },
           key: 'tos',
-          value: 'https://opencollective.com/tos',
+          value: 'https://qpayee.com/tos',
         },
         randomUser,
       );
@@ -191,13 +191,13 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
         {
           account: { legacyId: collective.id },
           key: 'tos',
-          value: 'https://opencollective.com/tos',
+          value: 'https://qpayee.com/tos',
         },
         adminUser,
       );
 
       expect(result.errors).to.not.exist;
-      expect(result.data.editAccountSetting.settings).to.deep.eq({ tos: 'https://opencollective.com/tos' });
+      expect(result.data.editAccountSetting.settings).to.deep.eq({ tos: 'https://qpayee.com/tos' });
 
       // Check activity
       const activity = await models.Activity.findOne({
@@ -208,7 +208,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
       expect(activity.CollectiveId).to.equal(collective.id);
       expect(activity.data).to.deep.equal({
         previousData: { settings: {} },
-        newData: { settings: { tos: 'https://opencollective.com/tos' } },
+        newData: { settings: { tos: 'https://qpayee.com/tos' } },
       });
     });
 
@@ -239,7 +239,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
         {
           account: { legacyId: collective.id },
           key: 'anInvalidKey!',
-          value: 'https://opencollective.com/tos',
+          value: 'https://qpayee.com/tos',
         },
         adminUser,
       );
@@ -306,7 +306,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
 
       expect(result.errors).to.exist;
       expect(result.errors[0].message).to.match(
-        /Enter a valid URL. The URL should have the format https:\/\/opencollective.com\//,
+        /Enter a valid URL. The URL should have the format https:\/\/qpayee.com\//,
       );
     });
   });
@@ -834,7 +834,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
   </tbody>
 </table>
 
-<p style="color: #494B4D; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; line-height: 18px;">If this message is spam, please forward it to <a href="mailto:support@opencollective.com" style="text-decoration: none; color: #297EFF;">support@opencollective.com</a>.</p>
+<p style="color: #494B4D; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; line-height: 18px;">If this message is spam, please forward it to <a href="mailto:support@qpayee.com" style="text-decoration: none; color: #297EFF;">support@qpayee.com</a>.</p>
 
 </td>
 </tr>
@@ -861,9 +861,9 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
     We can do great things together<br><br>
 
     You can also follow us on <a href="https://twitter.com/OpenCollect" style="text-decoration: none; color: #297EFF;">Twitter</a> or come chat with us on our public
-    <a href="https://discord.opencollective.com" style="text-decoration: none; color: #297EFF;">Discord</a>.
+    <a href="https://discord.qpayee.com" style="text-decoration: none; color: #297EFF;">Discord</a>.
     <br><br>
-    Made with ❤️ from <a href="https://docs.opencollective.com/help/about/team" style="text-decoration: none; color: #297EFF;">all over the world</a>
+    Made with ❤️ from <a href="https://docs.qpayee.com/help/about/team" style="text-decoration: none; color: #297EFF;">all over the world</a>
   </td>
 </tr>
 <tr>
@@ -878,7 +878,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
 </td>
 </tr>
 </table><!-- 100% width table -->
-<!-- OpenCollective.com -->
+<!-- qpayee.com -->
 </body>
 
 </html>`;
@@ -925,7 +925,7 @@ describe('server/graphql/v2/mutation/AccountMutations', () => {
 
       expect(result.errors).to.have.length(1);
       expect(result.errors[0].message).to.equal(
-        'You are not authorized to contact Collectives. Please contact support@opencollective.com if you think this is an error.',
+        'You are not authorized to contact Collectives. Please contact support@qpayee.com if you think this is an error.',
       );
 
       // Stores the reason

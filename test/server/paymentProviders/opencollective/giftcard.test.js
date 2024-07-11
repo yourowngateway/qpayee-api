@@ -662,7 +662,7 @@ describe('server/paymentProviders/opencollective/giftcard', () => {
       before(async () => {
         user = await models.User.createUserWithCollective({
           name: 'Test Prepaid Donator',
-          email: store.randEmail('prepaid-donator@opencollective.com'),
+          email: store.randEmail('prepaid-donator@qpayee.com'),
         });
       });
 

@@ -29,7 +29,7 @@ async function getIpString(collective) {
 function report(collective, context) {
   console.log(
     padEnd(`('${collective.slug}'),`, 32, ' '),
-    `-- ${context} ${collective.type} https://opencollective.com/${collective.slug}`,
+    `-- ${context} ${collective.type} https://qpayee.com/${collective.slug}`,
   );
 }
 
@@ -61,9 +61,9 @@ async function run() {
 
     const bayesResult = await collectiveBayesCheck(collective, ipString);
     if (bayesResult === 'spam' && collective.data?.isBanned === true) {
-      // console.log('HIT', `https://opencollective.com/${collective.slug}`);
+      // console.log('HIT', `https://qpayee.com/${collective.slug}`);
     } else if (collective.data?.isBanned === true) {
-      // console.log('MISS', `https://opencollective.com/${collective.slug}`);
+      // console.log('MISS', `https://qpayee.com/${collective.slug}`);
     }
 
     if (

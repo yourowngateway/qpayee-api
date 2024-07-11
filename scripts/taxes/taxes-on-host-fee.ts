@@ -65,7 +65,7 @@ const baseDataQuery = `
   AND t."type" = 'CREDIT'
   AND t."deletedAt" IS NULL
   AND t."HostCollectiveId" = collective."HostCollectiveId" -- Make sure the collective is still hosted by the same host (we have no cases like that, but just in case)
-  AND collective."isActive" IS TRUE -- Ignore archived/unhosted collectives. This will affect two profiles for a total of €2.30: https://opencollective.com/the-digital-circle/events/mapathon-mapping-hackathon-2021-88a863b4 and https://opencollective.com/pistil
+  AND collective."isActive" IS TRUE -- Ignore archived/unhosted collectives. This will affect two profiles for a total of €2.30: https://qpayee.com/the-digital-circle/events/mapathon-mapping-hackathon-2021-88a863b4 and https://qpayee.com/pistil
   ORDER BY host.slug, t.id DESC
   ) SELECT *
     FROM all_results

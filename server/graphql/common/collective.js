@@ -34,7 +34,7 @@ async function sendMessage({ req, collective, args, isGqlV2 }) {
 
   if (!canUseFeature(user, FEATURE.CONTACT_COLLECTIVE)) {
     throw new FeatureNotAllowedForUser(
-      'You are not authorized to contact Collectives. Please contact support@opencollective.com if you think this is an error.',
+      'You are not authorized to contact Collectives. Please contact support@qpayee.com if you think this is an error.',
     );
   }
 

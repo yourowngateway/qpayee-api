@@ -87,8 +87,8 @@ const main = async (): Promise<void> => {
       // Log CSV entry
       console.log(
         [
-          `https://opencollective.com/${host.slug}`,
-          `https://opencollective.com/${collective.slug}/expenses/${debitTransaction.ExpenseId}`,
+          `https://qpayee.com/${host.slug}`,
+          `https://qpayee.com/${collective.slug}/expenses/${debitTransaction.ExpenseId}`,
           amountPaidByHost,
           amountReceivedByPayee,
           paymentProcessorFee,

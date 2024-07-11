@@ -53,7 +53,7 @@ describe('server/lib/onboarding', () => {
     const startsAt = new Date(createdAt);
     startsAt.setHours(0);
     await processOnBoardingTemplate('onboarding.day2', startsAt);
-    expect(emailLibSendSpy.firstCall.args[3].from).to.equal('Open Collective <support@opencollective.com>');
+    expect(emailLibSendSpy.firstCall.args[3].from).to.equal('Open Collective <support@qpayee.com>');
     expect(emailLibSendSpy.callCount).to.equal(2);
     admins.map(admin => {
       const emailServiceCall = emailLibSendSpy.args.find(([, email]) => email === admin.email);

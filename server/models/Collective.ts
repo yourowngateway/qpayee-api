@@ -809,7 +809,7 @@ class Collective extends Model<
           status: 'CONFIRMED',
           organizer: {
             name: parentCollective.name,
-            email: `no-reply@opencollective.com`,
+            email: `no-reply@qpayee.com`,
           },
           alarms,
         };
@@ -1042,7 +1042,7 @@ class Collective extends Model<
     const hostedCollectives = await this.getHostedCollectivesCount();
     if (hostedCollectives >= 1) {
       throw new Error(
-        `You can't deactivate hosting while still hosting ${hostedCollectives} other collectives. Please contact support: support@opencollective.com.`,
+        `You can't deactivate hosting while still hosting ${hostedCollectives} other collectives. Please contact support: support@qpayee.com.`,
       );
     }
 
@@ -2113,13 +2113,13 @@ class Collective extends Model<
 
     if ([CollectiveType.COLLECTIVE, CollectiveType.FUND].includes(this.type) && this.isActive) {
       throw new Error(
-        `Active Collectives or Funds can't edit their currency. Contact support@opencollective.com if it's an issue.`,
+        `Active Collectives or Funds can't edit their currency. Contact support@qpayee.com if it's an issue.`,
       );
     }
 
     const isHost = await this.isHost();
     if (isHost) {
-      throw new Error(`Fiscal Hosts can't edit their currency. Contact support@opencollective.com if it's an issue.`);
+      throw new Error(`Fiscal Hosts can't edit their currency. Contact support@qpayee.com if it's an issue.`);
     }
 
     return this.setCurrency(currency);
@@ -2144,7 +2144,7 @@ class Collective extends Model<
       });
       if (transactionCount > 0) {
         throw new Error(
-          'You cannot change the currency of an Host with transactions. Please contact support@opencollective.com.',
+          'You cannot change the currency of an Host with transactions. Please contact support@qpayee.com.',
         );
       }
       let collectives = <Array<any>>await this.getHostedCollectives();

@@ -13,7 +13,7 @@ import libEmailTemplates from '../server/lib/emailTemplates';
 const templateName = process.argv[2];
 const data = {};
 data['user.new.token'] = {
-  loginLink: 'https://opencollective.com/signin?next=',
+  loginLink: 'https://qpayee.com/signin?next=',
 };
 data['onboarding.day21.noTwitter'] = {
   collective: {
@@ -38,7 +38,7 @@ data['collective.expense.approved'] = {
   collective: { slug: 'wwcodeaustin', name: 'Women Who Code Austin' },
   fromCollective: { slug: 'xdamman', name: 'Xavier Damman' },
   actions: {
-    viewLatestExpenses: 'https://opencollective.com/wwcodeaustin/expenses',
+    viewLatestExpenses: 'https://qpayee.com/wwcodeaustin/expenses',
   },
 };
 data['collective.expense.paid'] = {
@@ -59,7 +59,7 @@ data['collective.expense.paid'] = {
     name: 'Xavier Damman',
   },
   actions: {
-    viewLatestExpenses: 'https://opencollective.com/wwcodeaustin/expenses',
+    viewLatestExpenses: 'https://qpayee.com/wwcodeaustin/expenses',
   },
 };
 data['collective.expense.missing.receipt'] = {
@@ -77,7 +77,7 @@ data['collective.expense.missing.receipt'] = {
     name: 'Xavier Damman',
   },
   actions: {
-    viewLatestExpenses: 'https://opencollective.com/wwcodeaustin/expenses',
+    viewLatestExpenses: 'https://qpayee.com/wwcodeaustin/expenses',
   },
 };
 data['virtualcard.purchase'] = {
@@ -105,7 +105,7 @@ data['user.card.claimed'] = {
     previewImage:
       'https://opencollective-production.s3.us-west-1.amazonaws.com/02f87560-b2f1-11e8-85a0-75f200a0e2db.png',
   },
-  loginLink: 'https://opencollective.com/signin?next=',
+  loginLink: 'https://qpayee.com/signin?next=',
 };
 data['user.card.invited'] = {
   currency: 'USD',
@@ -423,9 +423,9 @@ data['user.monthlyreport'] = {
   recipient: { name: 'Xavier' },
   month: 'march',
   year: '2017',
-  manageSubscriptionsUrl: 'https://opencollective.com/recurring-contributions',
+  manageSubscriptionsUrl: 'https://qpayee.com/recurring-contributions',
   utm: Date.now(),
-  fallbackUrl: 'opencollective.com/email/some_id',
+  fallbackUrl: 'qpayee.com/email/some_id',
   subscriptions: [
     {
       amount: 10 * 100,
@@ -436,8 +436,8 @@ data['user.monthlyreport'] = {
         publicUrl: 'cycle.js.org',
         name: 'Between the Wires',
         slug: 'cyclejs',
-        image: 'http://opencollective.com/proxy/images/?src=https%3A%2F%2Fcldup.com%2F1Hzq0cyqgW.png&height=320',
-        backgroundImage: 'http://opencollective.com/proxy/images/?src=https://cldup.com/Gj243bgI0f.jpg&width=1024',
+        image: 'http://qpayee.com/proxy/images/?src=https%3A%2F%2Fcldup.com%2F1Hzq0cyqgW.png&height=320',
+        backgroundImage: 'http://qpayee.com/proxy/images/?src=https://cldup.com/Gj243bgI0f.jpg&width=1024',
         mission:
           'We are on a mission to explore and develop new technologies for psychological, emotional and spiritual flourishing.',
         stats: {
@@ -461,8 +461,8 @@ data['user.monthlyreport'] = {
         publicUrl: 'cycle.js.org',
         name: 'Between the Wires',
         slug: 'cyclejs',
-        image: 'http://opencollective.com/proxy/images/?src=https%3A%2F%2Fcldup.com%2F1Hzq0cyqgW.png&height=320',
-        backgroundImage: 'http://opencollective.com/proxy/images/?src=https://cldup.com/Gj243bgI0f.jpg&width=1024',
+        image: 'http://qpayee.com/proxy/images/?src=https%3A%2F%2Fcldup.com%2F1Hzq0cyqgW.png&height=320',
+        backgroundImage: 'http://qpayee.com/proxy/images/?src=https://cldup.com/Gj243bgI0f.jpg&width=1024',
         mission:
           'We are on a mission to explore and develop new technologies for psychological, emotional and spiritual flourishing.',
         stats: {
@@ -510,7 +510,7 @@ data['collective.apply.foundation'] = {
 const defaultData = {
   config: {
     host: {
-      website: process.env.WEBSITE_URL || 'https://opencollective.com',
+      website: process.env.WEBSITE_URL || 'https://qpayee.com',
     },
   },
 };
@@ -554,7 +554,7 @@ if (!templateName) {
     const mailer = getMailer();
     if (mailer) {
       const attributes = getTemplateAttributes(html);
-      const to = process.env.ONLY || 'test@opencollective.com';
+      const to = process.env.ONLY || 'test@qpayee.com';
       console.log('>>> Sending by email to ', to);
       mailer.sendMail(
         {

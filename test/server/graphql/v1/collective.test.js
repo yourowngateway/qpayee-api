@@ -906,7 +906,7 @@ describe('server/graphql/v1/collective', () => {
         socialLinks: [
           {
             type: 'WEBSITE',
-            url: 'https://opencollective.com',
+            url: 'https://qpayee.com',
           },
           {
             type: 'TWITTER',
@@ -923,7 +923,7 @@ describe('server/graphql/v1/collective', () => {
       expect(result.data.editCollective.socialLinks).to.eql([
         {
           type: 'WEBSITE',
-          url: 'https://opencollective.com/',
+          url: 'https://qpayee.com/',
         },
         {
           type: 'TWITTER',
@@ -935,7 +935,7 @@ describe('server/graphql/v1/collective', () => {
         },
       ]);
 
-      expect(result.data.editCollective.website).to.eq('https://opencollective.com/');
+      expect(result.data.editCollective.website).to.eq('https://qpayee.com/');
       expect(result.data.editCollective.twitterHandle).to.eq('opencollect');
       expect(result.data.editCollective.githubHandle).to.eq('opencollective/opencollective-api');
       expect(result.data.editCollective.repositoryUrl).to.eq('https://github.com/opencollective/opencollective-api');
@@ -961,7 +961,7 @@ describe('server/graphql/v1/collective', () => {
 
       const collective = {
         id: user.collective.id,
-        website: 'https://opencollective.com',
+        website: 'https://qpayee.com',
         twitterHandle: 'opencollect',
         githubHandle: 'opencollective',
         repositoryUrl: 'https://github.com/opencollective/opencollective-api',
@@ -972,7 +972,7 @@ describe('server/graphql/v1/collective', () => {
       expect(result.data.editCollective.socialLinks).to.eql([
         {
           type: 'WEBSITE',
-          url: 'https://opencollective.com',
+          url: 'https://qpayee.com',
         },
         {
           type: 'GIT',
@@ -988,7 +988,7 @@ describe('server/graphql/v1/collective', () => {
         },
       ]);
 
-      expect(result.data.editCollective.website).to.eq('https://opencollective.com');
+      expect(result.data.editCollective.website).to.eq('https://qpayee.com');
       expect(result.data.editCollective.twitterHandle).to.eq('opencollect');
       expect(result.data.editCollective.githubHandle).to.eq('opencollective/opencollective-api');
       expect(result.data.editCollective.repositoryUrl).to.eq('https://github.com/opencollective/opencollective-api');

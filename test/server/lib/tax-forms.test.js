@@ -100,26 +100,26 @@ describe('server/lib/tax-forms', () => {
   const usersData = [
     {
       name: 'Xavier Damman',
-      email: 'xdamman@opencollective.com',
+      email: 'xdamman@qpayee.com',
       legalName: 'Mr. Legal Name',
     },
     {
       name: 'Pia Mancini',
-      email: 'pia@opencollective.com',
+      email: 'pia@qpayee.com',
     },
     {
       name: 'Piet Geursen',
-      email: 'piet@opencollective.com',
+      email: 'piet@qpayee.com',
     },
     {
       name: 'Mix Irving',
-      email: 'mix@opencollective.com',
+      email: 'mix@qpayee.com',
     },
     {
-      email: 'randzzz@opencollective.com',
+      email: 'randzzz@qpayee.com',
     },
     {
-      email: 'using-inr-currency@opencollective.com',
+      email: 'using-inr-currency@qpayee.com',
       name: 'INR tester',
     },
   ];
@@ -429,7 +429,7 @@ describe('server/lib/tax-forms', () => {
       replace(client.workflowInstances, 'createInstance', fake.resolves(createInstanceResponse));
       replace(client.workflowInstances, 'getAuthenticatedLinkForStep', fake.resolves(documentLink));
 
-      const newUser = await fakeUser({ email: `${randStr()}@opencollective.com` });
+      const newUser = await fakeUser({ email: `${randStr()}@qpayee.com` });
       await sendHelloWorksUsTaxForm(client, newUser.collective, year, callbackUrl, workflowId);
 
       const doc = await models.LegalDocument.findOne({ where: { CollectiveId: newUser.collective.id } });
@@ -443,7 +443,7 @@ describe('server/lib/tax-forms', () => {
       replace(client.workflowInstances, 'createInstance', fake.resolves(createInstanceResponse));
       replace(client.workflowInstances, 'getAuthenticatedLinkForStep', fake.resolves(documentLink));
 
-      const adminUser = await fakeUser({ email: randEmail('test@opencollective.com') }); // Need to use an internal email
+      const adminUser = await fakeUser({ email: randEmail('test@qpayee.com') }); // Need to use an internal email
       const host = await fakeHost({ admin: adminUser });
       const payeeCollective = await fakeCollective({ HostCollectiveId: host.id, admin: adminUser });
       await sendHelloWorksUsTaxForm(client, payeeCollective, year, callbackUrl, workflowId);

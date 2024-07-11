@@ -103,7 +103,7 @@ const taxFormsQuery = `
   ) SELECT
     c.name,
     c."legalName",
-    ('https://opencollective.com/' || c.slug) AS "profileUrl",
+    ('https://qpayee.com/' || c.slug) AS "profileUrl",
     c."type",
     c."countryISO" as country,
     MIN(tax_form_status."requested_at") AS requested_at,

@@ -206,8 +206,8 @@ export async function createCollectiveFromGithub(_, args, req) {
     settings: { ...DEFAULT_COLLECTIVE_SETTINGS, ...args.collective.settings },
   };
 
-  // For e2e testing, we enable testuser+(admin|member|host)@opencollective.com to create collective without github validation
-  if (config.env !== 'production' && user.email.match(/.*test.*@opencollective.com$/)) {
+  // For e2e testing, we enable testuser+(admin|member|host)@qpayee.com to create collective without github validation
+  if (config.env !== 'production' && user.email.match(/.*test.*@qpayee.com$/)) {
     const existingCollective = models.Collective.findOne({
       where: { slug: collectiveData.slug.toLowerCase() },
     });

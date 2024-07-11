@@ -1816,7 +1816,7 @@ describe('server/graphql/v2/mutation/OrderMutations', () => {
         legacyId: order.id,
         tier: { legacyId: newTier.id },
         fromAccount: { legacyId: newFromUser.CollectiveId },
-        fromAccountInfo: { name: 'Hey', email: 'hey@opencollective.com' },
+        fromAccountInfo: { name: 'Hey', email: 'hey@qpayee.com' },
         description: 'New description',
         memo: 'New memo',
         ponumber: 'New ponumber',
@@ -1933,7 +1933,7 @@ describe('server/graphql/v2/mutation/OrderMutations', () => {
       expect(resultOrder.pendingContributionData.memo).to.equal('New memo');
       expect(resultOrder.pendingContributionData.fromAccountInfo).to.deep.equal({
         name: 'Hey',
-        email: 'hey@opencollective.com',
+        email: 'hey@qpayee.com',
       });
 
       expect(resultOrder.hostFeePercent).to.equal(12.5);

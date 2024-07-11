@@ -65,7 +65,7 @@ describe('server/lib/email', () => {
         collective,
       };
       const options = {
-        from: `"${collective.name}" <hello@opencollective.com>`,
+        from: `"${collective.name}" <hello@qpayee.com>`,
       };
       await emailLib.send(template, data.user.email, data, options);
       let amountStr = 50;
@@ -76,7 +76,7 @@ describe('server/lib/email', () => {
         maximumFractionDigits: 2,
       });
       expect(nm.sendMail.lastCall.args[0].from).to.equal(options.from);
-      expect(nm.sendMail.lastCall.args[0].to).to.equal('emailbcc+user1-at-opencollective.com@opencollective.com');
+      expect(nm.sendMail.lastCall.args[0].to).to.equal('emailbcc+user1-at-qpayee.com@qpayee.com');
       expect(nm.sendMail.lastCall.args[0].subject).to.contain(
         `Merci pour votre contribution de ${amountStr}/mois à En Marche`,
       );
@@ -92,7 +92,7 @@ describe('server/lib/email', () => {
         'List-ID': 'enmarchebe::order.thankyou',
         'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
         'List-Unsubscribe':
-          '<http://localhost:3000/email/unsubscribe/user1%40opencollective.com/enmarchebe/order.thankyou/54349853da7f4493e08265f3a6d600a9b705aec3bea42cb8ce23688c3060c3837d04a6285263edfdcdc83cfd7a7f95692f274a1c4d7f40f4c0db031e638589e9>',
+          '<http://localhost:3000/email/unsubscribe/user1%40qpayee.com/enmarchebe/order.thankyou/54349853da7f4493e08265f3a6d600a9b705aec3bea42cb8ce23688c3060c3837d04a6285263edfdcdc83cfd7a7f95692f274a1c4d7f40f4c0db031e638589e9>',
       });
     });
 
@@ -121,7 +121,7 @@ describe('server/lib/email', () => {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       });
-      expect(nm.sendMail.lastCall.args[0].to).to.equal('emailbcc+user1-at-opencollective.com@opencollective.com');
+      expect(nm.sendMail.lastCall.args[0].to).to.equal('emailbcc+user1-at-qpayee.com@qpayee.com');
       expect(nm.sendMail.lastCall.args[0].subject).to.contain(
         `Thank you for your ${amountStr}/month donation to WWCode Austin`,
       );
@@ -131,13 +131,13 @@ describe('server/lib/email', () => {
         'List-ID': 'wwcodeaustin::order.thankyou',
         'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
         'List-Unsubscribe':
-          '<http://localhost:3000/email/unsubscribe/user1%40opencollective.com/wwcodeaustin/order.thankyou/d33986f22d66bf7254173f354874ba1557b094f96ac12ebb0afbabfd9a3fe76ed1fc5c30662d7ecc318ff6a0a47f9b09b9e71797b72627423b9694710fd0c80e>',
+          '<http://localhost:3000/email/unsubscribe/user1%40qpayee.com/wwcodeaustin/order.thankyou/d33986f22d66bf7254173f354874ba1557b094f96ac12ebb0afbabfd9a3fe76ed1fc5c30662d7ecc318ff6a0a47f9b09b9e71797b72627423b9694710fd0c80e>',
       });
     });
   });
 
   describe('Unsubscribe', () => {
-    const EMAIL_ADDRESS = 'user@opencollective.com';
+    const EMAIL_ADDRESS = 'user@qpayee.com';
     const COLLECTIVE_SLUG = 'collective_slug';
     const EMAIL_TYPE = 'test-notification';
 
@@ -188,12 +188,12 @@ describe('server/lib/email', () => {
 
   describe('generateFromEmailHeader', () => {
     it('sanitizes invalid characters', () => {
-      expect(emailLib.generateFromEmailHeader('Hello World')).to.equal('"Hello World" <no-reply@opencollective.com>');
+      expect(emailLib.generateFromEmailHeader('Hello World')).to.equal('"Hello World" <no-reply@qpayee.com>');
       expect(emailLib.generateFromEmailHeader('Hello World <NOPE>')).to.equal(
-        '"Hello World <NOPE>" <no-reply@opencollective.com>',
+        '"Hello World <NOPE>" <no-reply@qpayee.com>',
       );
       expect(emailLib.generateFromEmailHeader('Hello "World" <NOPE>')).to.equal(
-        '"Hello “World“ <NOPE>" <no-reply@opencollective.com>',
+        '"Hello “World“ <NOPE>" <no-reply@qpayee.com>',
       );
       expect(
         emailLib.generateFromEmailHeader(
@@ -201,12 +201,12 @@ describe('server/lib/email', () => {
       
           “World“     <NOPE>`,
         ),
-      ).to.equal('"Hello “World“ <NOPE>" <no-reply@opencollective.com>');
+      ).to.equal('"Hello “World“ <NOPE>" <no-reply@qpayee.com>');
     });
 
     it('can customize the email address', () => {
-      expect(emailLib.generateFromEmailHeader('Hello World', 'test@opencollective.com')).to.equal(
-        '"Hello World" <test@opencollective.com>',
+      expect(emailLib.generateFromEmailHeader('Hello World', 'test@qpayee.com')).to.equal(
+        '"Hello World" <test@qpayee.com>',
       );
     });
   });

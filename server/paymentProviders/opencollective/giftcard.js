@@ -21,7 +21,7 @@ import models, { Op, sequelize } from '../../models';
  */
 
 const LIMIT_REACHED_ERROR =
-  'Gift card create failed because you reached limit. Please try again later or contact support@opencollective.com';
+  'Gift card create failed because you reached limit. Please try again later or contact support@qpayee.com';
 
 /** Get the balance of a gift card card
  * @param {models.PaymentMethod} paymentMethod is the instance of the

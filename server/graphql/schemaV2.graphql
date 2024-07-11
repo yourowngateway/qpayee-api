@@ -3243,7 +3243,7 @@ input AccountReferenceInput {
   legacyId: Int @deprecated(reason: "2020-01-01: should only be used during the transition to GraphQL API v2.")
 
   """
-  The slug identifying the account (ie: babel for https://opencollective.com/babel)
+  The slug identifying the account (ie: babel for https://qpayee.com/babel)
   """
   slug: String
 }
@@ -12910,12 +12910,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Account (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Account (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Account (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Account (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -13089,12 +13089,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Collective (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Collective (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Collective (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Collective (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -13126,12 +13126,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Event (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Event (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Event (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Event (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -13298,12 +13298,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Fund (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Fund (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Fund (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Fund (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -13319,12 +13319,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Host (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Host (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Host (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Host (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -13397,12 +13397,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Individual (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Individual (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Individual (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Individual (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -13547,12 +13547,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Organization (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Organization (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Organization (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Organization (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -13568,12 +13568,12 @@ type Query {
     id: String
 
     """
-    The slug identifying the Project (ie: babel for https://opencollective.com/babel)
+    The slug identifying the Project (ie: babel for https://qpayee.com/babel)
     """
     slug: String
 
     """
-    The githubHandle attached to the Project (ie: babel for https://opencollective.com/babel)
+    The githubHandle attached to the Project (ie: babel for https://qpayee.com/babel)
     """
     githubHandle: String
 
@@ -19695,7 +19695,7 @@ input NewAccountOrReferenceInput {
   legacyId: Int @deprecated(reason: "2020-01-01: should only be used during the transition to GraphQL API v2.")
 
   """
-  The slug identifying the account (ie: babel for https://opencollective.com/babel)
+  The slug identifying the account (ie: babel for https://qpayee.com/babel)
   """
   slug: String
   name: String
@@ -21014,7 +21014,7 @@ input VendorEditInput {
   legacyId: Int @deprecated(reason: "2020-01-01: should only be used during the transition to GraphQL API v2.")
 
   """
-  The slug identifying the account (ie: babel for https://opencollective.com/babel)
+  The slug identifying the account (ie: babel for https://qpayee.com/babel)
   """
   slug: String
   name: NonEmptyString

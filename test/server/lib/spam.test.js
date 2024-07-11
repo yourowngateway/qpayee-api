@@ -150,7 +150,7 @@ describe('server/lib/spam', () => {
 
       const args = slackPostMessageStub.getCall(0).args;
       expect(args[0]).to.eq(
-        '*Suspicious collective data was submitted for collective:* https://opencollective.com/ketoooo\nScore: 0.3\nKeywords: `keto`',
+        '*Suspicious collective data was submitted for collective:* https://qpayee.com/ketoooo\nScore: 0.3\nKeywords: `keto`',
       );
       expect(args[1]).to.eq(config.slack.webhooks.abuse);
     });

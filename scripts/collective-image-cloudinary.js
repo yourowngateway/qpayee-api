@@ -15,7 +15,7 @@ async function main() {
     try {
       const response = await fetch(collective.image);
       // Alternative
-      // const response = await fetch(`https://images.opencollective.com/${collective.slug}/logo/256.png`);
+      // const response = await fetch(`https://images.qpayee.com/${collective.slug}/logo/256.png`);
       const buffer = await response.buffer();
       const size = buffer.byteLength;
       const mimetype = response.headers.get('Content-Type') || 'unknown';

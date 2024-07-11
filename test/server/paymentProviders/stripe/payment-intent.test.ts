@@ -217,7 +217,7 @@ describe('stripe/payment-intent', () => {
 
         await expect(paymentIntent.processOrder(order)).to.eventually.rejectedWith(
           Error,
-          'Error processing Stripe Payment Intent: Something went wrong with the payment, please contact support@opencollective.com.',
+          'Error processing Stripe Payment Intent: Something went wrong with the payment, please contact support@qpayee.com.',
         );
 
         expect(order.data.paymentIntent).to.eql({ id: paymentIntentId, status: 'requires_action' });
