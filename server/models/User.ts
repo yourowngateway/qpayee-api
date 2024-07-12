@@ -282,7 +282,11 @@ class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
   };
 
   isAdminOfOpenCollectiveInc = function (): boolean {
-    return this.hasRole([MemberRoles.ADMIN], 1) || this.hasRole([MemberRoles.ADMIN], 8686);
+    return (
+      this.hasRole([MemberRoles.ADMIN], 1) ||
+      this.hasRole([MemberRoles.ADMIN], 8686) ||
+      this.hasRole([MemberRoles.ADMIN], 10891)
+    );
   };
 
   isRoot = function (): boolean {
