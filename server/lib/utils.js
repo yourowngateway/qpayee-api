@@ -365,7 +365,7 @@ export function resizeImage(imageUrl, { width, height, query, defaultImage }) {
   }
 
   if (imageUrl[0] === '/') {
-    imageUrl = `https://opencollective.com${imageUrl}`;
+    imageUrl = `https://qpayee.com${imageUrl}`;
   }
 
   let queryurl = '';

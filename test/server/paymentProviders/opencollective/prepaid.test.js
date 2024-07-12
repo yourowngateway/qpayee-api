@@ -31,7 +31,7 @@ describe('server/paymentProviders/opencollective/prepaid', () => {
   before(async () => {
     user = await models.User.createUserWithCollective({
       name: 'Test Prepaid Donator',
-      email: randEmail('prepaid-donator@opencollective.com'),
+      email: randEmail('prepaid-donator@qpayee.com'),
     });
   });
 

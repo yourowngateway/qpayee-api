@@ -9,7 +9,7 @@ export const getHostname = url => {
 };
 
 /**
- * Takes an URL like https://xxx.opencollective.com/test, returns 'opencollective.com'
+ * Takes an URL like https://xxx.qpayee.com/test, returns 'qpayee.com'
  */
 export const getRootDomain = (url: string): string => {
   return getHostname(url).split('.').slice(-2).join('.');

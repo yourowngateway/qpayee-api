@@ -26,17 +26,17 @@ const usersData = [
   },
   {
     name: 'Aseem Sood',
-    email: randEmail('test@opencollective.com'),
+    email: randEmail('test@qpayee.com'),
     role: 'ADMIN',
   },
   {
     name: 'Pia Mancini',
-    email: randEmail('test@opencollective.com'),
+    email: randEmail('test@qpayee.com'),
     role: 'BACKER',
   },
   {
     name: 'github',
-    email: 'github+test@opencollective.com',
+    email: 'github+test@qpayee.com',
     image: 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png',
     role: 'BACKER',
   },

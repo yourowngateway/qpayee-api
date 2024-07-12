@@ -315,7 +315,7 @@ const reconcileSubscription = async (paypalSubscriptionId: string, _, commander)
       const amount = get(paypalTransaction, 'amount_with_breakdown.gross_amount');
       const amountStr = amount ? `${amount['currency_code']} ${amount['value']}` : '~';
       console.log(
-        `PayPal transaction ${paypalTransaction.id} ${amountStr} to https://opencollective.com/${order.collective.slug} needs to be recorded in DB (${paypalTransaction['time']})`,
+        `PayPal transaction ${paypalTransaction.id} ${amountStr} to https://qpayee.com/${order.collective.slug} needs to be recorded in DB (${paypalTransaction['time']})`,
       );
       if (options['fix']) {
         await recordPaypalTransaction(order, paypalTransaction, {
@@ -376,7 +376,7 @@ const cancelSubscription = async (paypalSubscriptionId: string, reason: string, 
 
 const findOrphanSubscriptions = async (_, commander) => {
   const options = commander.optsWithGlobals();
-  const reason = `Some PayPal subscriptions were previously not cancelled properly. Please contact support@opencollective.com for any question.`;
+  const reason = `Some PayPal subscriptions were previously not cancelled properly. Please contact support@qpayee.com for any question.`;
   const hostSlugs = await getHostsSlugsFromOptions(options);
   const allHosts = await models.Collective.findAll({ where: { slug: hostSlugs } });
   const orphanContributions = await sequelize.query(

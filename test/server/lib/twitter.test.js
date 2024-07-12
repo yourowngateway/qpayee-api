@@ -11,7 +11,7 @@ describe('server/lib/twitter', () => {
     const data = {
       month: 'December',
       year: 2017,
-      collectiveUrl: 'https://opencollective.com/preact',
+      collectiveUrl: 'https://qpayee.com/preact',
       totalNewBackers: 2,
       totalActiveBackers: 82,
       totalAmountSpent: 0,

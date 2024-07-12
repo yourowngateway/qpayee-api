@@ -186,7 +186,7 @@ describe('server/graphql/v1/user', () => {
 
       it("doesn't get the payment method of the user if not logged in", async () => {
         const remoteUser = await User.createUserWithCollective({
-          email: randEmail('user@opencollective.com'),
+          email: randEmail('user@qpayee.com'),
         });
         const resultCreateOrder = await graphqlQueryV2(
           CREATE_ORDER_MUTATION,

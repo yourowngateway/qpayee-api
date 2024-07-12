@@ -2,7 +2,7 @@ export default {
   host1: {
     name: 'WWCode',
     hostFeePercent: 10,
-    email: 'finance+wwcode@opencollective.com',
+    email: 'finance+wwcode@qpayee.com',
     description: 'engineer',
     longDescription: 'This is a long description with some *markdown* **style**',
     twitterHandle: 'wwcode',
@@ -13,7 +13,7 @@ export default {
   },
   user1: {
     name: 'Phil Mod',
-    email: 'user1@opencollective.com',
+    email: 'user1@qpayee.com',
     description: 'engineer',
     longDescription: 'This is a long description with some *markdown* **style**',
     twitterHandle: 'philmod',
@@ -24,7 +24,7 @@ export default {
     name: 'Anish Bas',
     image: 'https://pbs.twimg.com/profile_images/3075727251/5c825534ad62223ae6a539f6a5076d3c_400x400.jpeg',
     description: 'small guy',
-    email: 'user2@opencollective.com',
+    email: 'user2@qpayee.com',
     twitterHandle: 'abas',
     company: 'Open Collective Inc.',
     website: 'http://abas.com',
@@ -32,13 +32,13 @@ export default {
 
   user3: {
     name: 'Xavier Damman',
-    email: 'user3@opencollective.com',
+    email: 'user3@qpayee.com',
     location: { address: 'Rue du paradis\n1000 Brussels\nBelgium' },
   },
 
   user4: {
     name: 'Bo Ki',
-    email: 'user4@opencollective.com',
+    email: 'user4@qpayee.com',
   },
 
   user5: {
@@ -48,7 +48,7 @@ export default {
 
   user6: {
     name: 'internal user',
-    email: 'internal_user@opencollective.com',
+    email: 'internal_user@qpayee.com',
   },
 
   collective1: {
@@ -147,7 +147,7 @@ export default {
           user: {
             name: 'John Doe',
             email: 'john@doe.com',
-            websiteUrl: 'opencollective.com',
+            websiteUrl: 'qpayee.com',
           },
           fromCollective: { name: 'John Doe', twitterHandle: 'johndoe' },
         },
@@ -182,7 +182,7 @@ export default {
           collective: {
             name: 'Pub quiz',
             slug: 'pubquiz',
-            publicUrl: 'https://opencollective.com/pubquiz',
+            publicUrl: 'https://qpayee.com/pubquiz',
           },
         },
       },
@@ -204,7 +204,7 @@ export default {
           collective: {
             name: 'Pub quiz',
             slug: 'pubquiz',
-            publicUrl: 'https://opencollective.com/pubquiz',
+            publicUrl: 'https://qpayee.com/pubquiz',
           },
         },
       },
@@ -226,7 +226,7 @@ export default {
           collective: {
             name: 'Pub quiz',
             slug: 'pubquiz',
-            publicUrl: 'https://opencollective.com/pubquiz',
+            publicUrl: 'https://qpayee.com/pubquiz',
           },
         },
       },
@@ -247,7 +247,7 @@ export default {
           collective: {
             name: 'Pub quiz',
             slug: 'pubquiz',
-            publicUrl: 'https://opencollective.com/pubquiz',
+            publicUrl: 'https://qpayee.com/pubquiz',
           },
           expense: {
             id: 42,
@@ -282,7 +282,7 @@ export default {
           collective: {
             name: 'Blah',
             slug: 'blah',
-            publicUrl: 'https://opencollective.com/blah',
+            publicUrl: 'https://qpayee.com/blah',
           },
         },
       },
@@ -306,7 +306,7 @@ export default {
             name: 'Yeoman',
             slug: 'yeoman',
             twitterHandle: 'yeoman',
-            publicUrl: 'https://opencollective.com/yeoman',
+            publicUrl: 'https://qpayee.com/yeoman',
           },
         },
       },
@@ -331,7 +331,7 @@ export default {
             name: 'Yeoman',
             slug: 'yeoman',
             twitterHandle: 'yeoman',
-            publicUrl: 'https://opencollective.com/yeoman',
+            publicUrl: 'https://qpayee.com/yeoman',
           },
         },
       },
@@ -344,7 +344,7 @@ export default {
           collective: {
             name: 'Blah',
             slug: 'blah',
-            publicUrl: 'https://opencollective.com/blah',
+            publicUrl: 'https://qpayee.com/blah',
           },
         },
       },
@@ -368,7 +368,7 @@ export default {
             payoutMethod: {
               id: 42,
               type: 'PAYPAL',
-              data: { email: 'support@opencollective.com' },
+              data: { email: 'support@qpayee.com' },
             },
           },
         },
@@ -544,7 +544,7 @@ export default {
     user: {
       id: 1,
       name: 'Phil Mod',
-      email: 'user1@opencollective.com',
+      email: 'user1@qpayee.com',
       image: null,
       twitterHandle: 'philmod',
       website: 'http://startupmanifesto.be',
@@ -626,7 +626,7 @@ export default {
       address: '547 Broadway, NY 10012',
       geoLocationLatLong: { type: 'Point', coordinates: [39.807222, -76.984722] },
     },
-    backgroundImage: 'http://opencollective.com/backgroundimage.png',
+    backgroundImage: 'http://qpayee.com/backgroundimage.png',
   },
 
   event2: {

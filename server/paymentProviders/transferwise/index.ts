@@ -229,7 +229,7 @@ async function createTransfer(
   if (!paymentOption || paymentOption.disabled) {
     const message =
       paymentOption?.disabledReason?.message ||
-      `We can't find a compatible wise payment method for this transaction. Please re-connecte Wise or contact support at support@opencollective.com`;
+      `We can't find a compatible wise payment method for this transaction. Please re-connecte Wise or contact support at support@qpayee.com`;
     throw new TransferwiseError(message, null, { quote });
   }
 
@@ -727,7 +727,7 @@ const oauth = {
       reportErrorToSentry(e);
       redirectUrl.searchParams.append(
         'error',
-        `Could not OAuth with TransferWise, please contact support@opencollective.com. State: ${state}`,
+        `Could not OAuth with TransferWise, please contact support@qpayee.com. State: ${state}`,
       );
       res.redirect(redirectUrl.href);
     }

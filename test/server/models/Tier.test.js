@@ -35,11 +35,11 @@ describe('server/models/Tier', () => {
   const users = [
     {
       username: 'xdamman',
-      email: 'xdamman@opencollective.com',
+      email: 'xdamman@qpayee.com',
     },
     {
       username: 'piamancini',
-      email: 'pia@opencollective.com',
+      email: 'pia@qpayee.com',
     },
   ];
 

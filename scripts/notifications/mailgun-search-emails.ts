@@ -24,7 +24,7 @@ const main = async () => {
   program.parse();
 
   const options = program.opts();
-  const url = new URL(`https://api.mailgun.net/v3/opencollective.com/events`);
+  const url = new URL(`https://api.mailgun.net/v3/qpayee.com/events`);
   url.searchParams.append('event', 'delivered');
   url.searchParams.append('limit', options.limit);
   url.searchParams.append('ascending', 'no');
@@ -68,7 +68,7 @@ const main = async () => {
     // Generate HTML file
     if (options.write) {
       const storageKey = item.storage.key;
-      const emailUrl = `https://api.mailgun.net/v3/domains/opencollective.com/messages/${storageKey}`;
+      const emailUrl = `https://api.mailgun.net/v3/domains/qpayee.com/messages/${storageKey}`;
       const emailResponse = await fetch(emailUrl, { headers });
       if (!emailResponse.ok) {
         console.error(`Failed to fetch email: ${emailResponse.status} ${emailResponse.statusText}`);

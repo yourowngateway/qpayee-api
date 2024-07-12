@@ -27,7 +27,7 @@ module.exports = {
         MIN("CreatedByUserId"),
         '{"createdFrom": "migrations/20230202093349-move-attached-file-name-to-uploaded-files.js"}'::jsonb
       FROM "ExpenseAttachedFiles"
-      WHERE NOT STARTS_WITH("url", 'https://rest.opencollective.com') -- Settlement expenses
+      WHERE NOT STARTS_WITH("url", 'https://rest.qpayee.com') -- Settlement expenses
       AND NOT STARTS_WITH("url", 'https://loremflickr.com') -- To not break in dev/test envs
       AND NOT EXISTS(
           SELECT 1

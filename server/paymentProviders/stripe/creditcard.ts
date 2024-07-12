@@ -21,7 +21,7 @@ import {
   resolvePaymentMethodForOrder,
 } from './common';
 
-const UNKNOWN_ERROR_MSG = 'Something went wrong with the payment, please contact support@opencollective.com.';
+const UNKNOWN_ERROR_MSG = 'Something went wrong with the payment, please contact support@qpayee.com.';
 
 /**
  * Returns a Promise with the transaction created
@@ -219,8 +219,7 @@ export default {
         'This account cannot currently make live charges.': 'Payment Processing error (Host error).',
         // This is a new unhandled error. We think customers should delete the card and add it again.
         // eslint-disable-next-line camelcase
-        card_error_authentication_required:
-          'There is an issue with your card, please contact support@opencollective.com.',
+        card_error_authentication_required: 'There is an issue with your card, please contact support@qpayee.com.',
       };
       const errorKey = Object.keys(identifiedErrors).find(errorMessage => error.message.includes(errorMessage));
       if (errorKey) {

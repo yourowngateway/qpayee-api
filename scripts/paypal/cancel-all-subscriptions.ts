@@ -126,7 +126,7 @@ const main = async () => {
       try {
         const result = await paypalRequestV2(`payments/captures/${captureId}/refund`, host, 'POST', {
           // eslint-disable-next-line camelcase
-          note_to_payer: `${collective.name} (https://opencollective.com/${collective.slug}) has been archived`,
+          note_to_payer: `${collective.name} (https://qpayee.com/${collective.slug}) has been archived`,
         });
 
         if (result.status === 'COMPLETED') {
@@ -148,7 +148,7 @@ const main = async () => {
 
     // Cancel on PayPal
     if (subscription.status === 'ACTIVE') {
-      const cancelReason = `Collective ${collective.name} (https://opencollective.com/${collective.slug}) has been archived`;
+      const cancelReason = `Collective ${collective.name} (https://qpayee.com/${collective.slug}) has been archived`;
       console.log(`  - Need to cancel PayPal subscription ${paypalSubscriptionId}: ${cancelReason}`);
       if (options['fix']) {
         await cancelPaypalSubscription(order, cancelReason, host);

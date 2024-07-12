@@ -282,7 +282,11 @@ class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
   };
 
   isAdminOfOpenCollectiveInc = function (): boolean {
-    return this.hasRole([MemberRoles.ADMIN], 1) || this.hasRole([MemberRoles.ADMIN], 8686);
+    return (
+      this.hasRole([MemberRoles.ADMIN], 1) ||
+      this.hasRole([MemberRoles.ADMIN], 8686) ||
+      this.hasRole([MemberRoles.ADMIN], 10891)
+    );
   };
 
   isRoot = function (): boolean {
@@ -632,7 +636,7 @@ User.init(
             !emailLib.isAuthorizedEmailDomain(val.toLowerCase())
           ) {
             throw new Error(
-              'This email provider is not allowed on Open Collective. If you think that it should be, please email us at support@opencollective.com.',
+              'This email provider is not allowed on Open Collective. If you think that it should be, please email us at support@qpayee.com.',
             );
           }
         },
@@ -661,7 +665,7 @@ User.init(
             !emailLib.isAuthorizedEmailDomain(val.toLowerCase())
           ) {
             throw new Error(
-              'This email provider is not allowed on Open Collective. If you think that it should be, please email us at support@opencollective.com.',
+              'This email provider is not allowed on Open Collective. If you think that it should be, please email us at support@qpayee.com.',
             );
           }
         },

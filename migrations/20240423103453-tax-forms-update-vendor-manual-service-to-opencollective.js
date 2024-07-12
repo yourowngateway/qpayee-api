@@ -27,8 +27,8 @@ module.exports = {
       AND (
         "documentLink" IS NULL
         OR (
-          "documentLink" NOT ILIKE 'https://vendor.opencollective.com/api/v1/collectives/%/legal-documents/%'
-          AND "documentLink" NOT ILIKE 'https://vendor.opencollective.com/api/v1/collectives/%/legal-documents/%'
+          "documentLink" NOT ILIKE 'https://vendor.qpayee.com/api/v1/collectives/%/legal-documents/%'
+          AND "documentLink" NOT ILIKE 'https://vendor.qpayee.com/api/v1/collectives/%/legal-documents/%'
         )
       );
     `);

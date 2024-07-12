@@ -10,7 +10,7 @@ import models, { Op, sequelize } from '../server/models';
 function report(collective, context) {
   console.log(
     padEnd(`('${collective.slug}'),`, 32, ' '),
-    `-- ${context} ${collective.type} https://opencollective.com/${collective.slug}`,
+    `-- ${context} ${collective.type} https://qpayee.com/${collective.slug}`,
   );
 }
 

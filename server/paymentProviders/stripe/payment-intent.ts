@@ -141,7 +141,7 @@ async function processRecurringOrder(order: Order) {
     } else if (paymentIntent.status !== 'succeeded') {
       logger.error('Unknown error with Stripe Payment Intent.');
       reportMessageToSentry('Unknown error with Stripe Payment Intent', { extra: { paymentIntent } });
-      throw new Error('Something went wrong with the payment, please contact support@opencollective.com.');
+      throw new Error('Something went wrong with the payment, please contact support@qpayee.com.');
     }
   } catch (e) {
     const sanitizedError = pick(e, ['code', 'message', 'requestId', 'statusCode']);

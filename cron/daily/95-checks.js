@@ -3,7 +3,7 @@ import '../../server/env';
 import { checkAllModels } from '../../checks/model';
 import email from '../../server/lib/email';
 
-const recipients = 'ops@opencollective.com';
+const recipients = 'ops@qpayee.com';
 
 const subject = 'Daily Checks failed';
 

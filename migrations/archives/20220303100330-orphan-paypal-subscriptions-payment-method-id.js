@@ -27,7 +27,7 @@ module.exports = {
           AND t."isRefund" IS NOT TRUE
           AND pm."type" = 'creditcard'
           AND (
-          t."data" ->> 'refundReason' = 'Some PayPal subscriptions were previously not cancelled properly. Please contact support@opencollective.com for any question.'
+          t."data" ->> 'refundReason' = 'Some PayPal subscriptions were previously not cancelled properly. Please contact support@qpayee.com for any question.'
             OR t."data" -> 'createdFromPaymentReconciliatorAt' IS NOT NULL
         )
         GROUP BY t."TransactionGroup", pm.id, paypal_subscription."id"

@@ -82,7 +82,7 @@ describe('server/graphql/v2/query/ExpenseQuery', () => {
           payeeLocation: { country: 'FR' },
           items: [
             {
-              url: 'https://opencollective.com',
+              url: 'https://qpayee.com',
               amount: 1000,
               description: 'A description',
             },
@@ -92,7 +92,7 @@ describe('server/graphql/v2/query/ExpenseQuery', () => {
             slug: 'a-slug',
             id: 4242,
             legalName: 'A legal name',
-            email: 'test@opencollective.com',
+            email: 'test@qpayee.com',
             organization: {
               name: 'An organization name',
             },
@@ -230,11 +230,11 @@ describe('server/graphql/v2/query/ExpenseQuery', () => {
 
       // Check results
       const expectedData = {
-        items: [{ amount: 1000, description: 'A description', url: 'https://opencollective.com' }],
+        items: [{ amount: 1000, description: 'A description', url: 'https://qpayee.com' }],
         payeeLocation: { country: 'FR' },
         payee: {
           id: 4242,
-          email: 'test@opencollective.com',
+          email: 'test@qpayee.com',
           legalName: 'A legal name',
           name: 'A name',
           organization: { name: 'An organization name' },

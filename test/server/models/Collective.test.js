@@ -65,12 +65,12 @@ describe('server/models/Collective', () => {
     {
       slug: 'xdamman',
       name: 'Xavier Damman',
-      email: 'xdamman@opencollective.com',
+      email: 'xdamman@qpayee.com',
     },
     {
       slug: 'piamancini',
       name: 'Pia Mancini',
-      email: 'pia@opencollective.com',
+      email: 'pia@qpayee.com',
     },
   ];
 
@@ -386,7 +386,7 @@ describe('server/models/Collective', () => {
       const ics = await event.getICS();
       expect(ics).to.contain('STATUS:CONFIRMED');
       expect(ics).to.contain('/tipbox/events/sustainoss-london');
-      expect(ics).to.contain('no-reply@opencollective.com');
+      expect(ics).to.contain('no-reply@qpayee.com');
     });
   });
 
@@ -539,7 +539,7 @@ describe('server/models/Collective', () => {
       const applyArgs = sendEmailSpy.args.find(callArgs => callArgs[1].includes('Thanks for applying'));
       expect(applyArgs).to.exist;
       expect(applyArgs[0]).to.equal(user1.email);
-      expect(applyArgs[3].from).to.equal('no-reply@opencollective.com');
+      expect(applyArgs[3].from).to.equal('no-reply@qpayee.com');
     });
 
     it('updates hostFeePercent for collective and events when adding or changing host', async () => {
@@ -599,13 +599,13 @@ describe('server/models/Collective', () => {
     let collective = await models.Collective.create({
       name: 'Open Collective',
       type: 'ORGANIZATION',
-      website: 'https://opencollective.com',
+      website: 'https://qpayee.com',
     });
     // Make sure clearbit image is fetched (done automatically and async in normal conditions)
     await collective.findImage(true);
     // Fetch back the collective from the database
     collective = await models.Collective.findByPk(collective.id);
-    expect(collective.image).to.equal('https://logo.clearbit.com/opencollective.com');
+    expect(collective.image).to.equal('https://logo.clearbit.com/qpayee.com');
   });
 
   it('creates an organization with an admin user', async () => {

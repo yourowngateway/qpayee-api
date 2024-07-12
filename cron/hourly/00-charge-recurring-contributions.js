@@ -21,7 +21,7 @@ import { sequelize } from '../../server/models';
 
 const json2csv = (data, opts = undefined) => new Parser(opts).parse(data);
 
-const REPORT_EMAIL = 'ops@opencollective.com';
+const REPORT_EMAIL = 'ops@qpayee.com';
 
 // These field names are the ones returned by
 // processOrderWithSubscription().
